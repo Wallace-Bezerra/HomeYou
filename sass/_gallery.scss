@@ -1,0 +1,36 @@
+.gallery-section.bg {
+    background-color: $background;
+}
+
+.gallery-section {
+    margin: 0 auto;
+
+    .gallery-description {
+        width: 770px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 32px;
+        margin-top: 55px;
+
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 19px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 160%;
+            color: $gray;
+        }
+    }
+
+    .gallery-wrapper {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 47px;
+    }
+
+}

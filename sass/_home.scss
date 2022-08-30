@@ -1,0 +1,57 @@
+.home-section.bg {
+    background-color: $background;
+}
+
+.home-section {
+    display: flex;
+    gap: 68px;
+
+    .home-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 499px;
+
+        h1 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 49px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $gray;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 160%;
+            margin-bottom: 32px;
+        }
+
+        .home-links {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            button {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: $white;
+                max-width: 225px;
+                width: 100%;
+                background-color: $black;
+                border: none;
+                padding: 12px 32px;
+                cursor: pointer;
+            }
+
+            a {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                text-decoration: underline;
+            }
+        }
+    }
+}

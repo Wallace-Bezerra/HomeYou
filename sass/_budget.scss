@@ -1,0 +1,33 @@
+.budget-section {
+    display: flex;
+    justify-content: center;
+    padding-block: 78px;
+
+    .budget-content {
+        text-align: center;
+
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 17px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: $gray;
+            margin-bottom: 36px;
+        }
+
+        button {
+            padding: 12px 32px;
+            background-color: transparent;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            cursor: pointer;
+        }
+    }
+}

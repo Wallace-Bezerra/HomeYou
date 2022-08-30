@@ -1,0 +1,58 @@
+.design-section {
+    height: 718px;
+    display: flex;
+    // gap: 106px;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .left-area {
+        width: 537px;
+        height: 507px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        img {
+            box-shadow: -50px -50px 0px $black;
+        }
+
+    }
+
+    .rigth-area {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .card {
+            background-color: $black;
+            width: 585px;
+            height: 182px;
+            padding: 20px 30px 30px 30px;
+
+            h2 {
+                color: $white;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 34px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: $white;
+                width: 521px;
+            }
+
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration: underline;
+        }
+    }
+}

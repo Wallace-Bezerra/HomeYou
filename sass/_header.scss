@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    .menu {
+        display: flex;
+
+        .links {
+            display: flex;
+            gap: 48px;
+            margin-right: 56px;
+
+            li {
+                a {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .links-icones {
+            display: flex;
+            gap: 32px;
+        }
+    }
+}
