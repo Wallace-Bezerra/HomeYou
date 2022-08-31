@@ -1,56 +1,109 @@
 .home-section.bg {
     background-color: $background;
-}
 
-.home-section {
-    display: flex;
-    gap: 68px;
 
-    .home-main {
+    .home-section {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 499px;
+        gap: 68px;
 
-        h1 {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 40px;
-            line-height: 49px;
-            margin-bottom: 16px;
-        }
-
-        p {
-            color: $gray;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 160%;
-            margin-bottom: 32px;
-        }
-
-        .home-links {
+        .home-main {
             display: flex;
-            align-items: center;
-            gap: 40px;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 499px;
 
-            button {
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 22px;
-                color: $white;
-                max-width: 225px;
-                width: 100%;
-                background-color: $black;
-                border: none;
-                padding: 12px 32px;
-                cursor: pointer;
+            h1 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 49px;
+                margin-bottom: 16px;
             }
 
-            a {
+            p {
+                color: $gray;
                 font-weight: 500;
                 font-size: 18px;
-                line-height: 22px;
-                text-decoration: underline;
+                line-height: 160%;
+                margin-bottom: 32px;
+            }
+
+            .home-links {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+
+                button {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: $white;
+                    max-width: 225px;
+                    width: 100%;
+                    background-color: $black;
+                    border: none;
+                    padding: 12px 32px;
+                    cursor: pointer;
+                }
+
+                a {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-decoration: underline;
+                    padding: 10px 12px;
+                }
+            }
+        }
+    }
+
+    @include responsive(1120px) {
+
+
+        .home-section {
+            justify-content: center;
+            padding-block: 40px;
+
+            .home-image {
+                display: none;
+                align-self: center;
+            }
+
+            .container {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    @include responsive(600px) {
+        .home-section {
+            .home-main {
+                h1 {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 140%;
+                }
+
+                .home-links {
+                    button {
+                        padding: 8px 20px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        width: auto;
+                    }
+
+                    a {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+                }
+
             }
         }
     }

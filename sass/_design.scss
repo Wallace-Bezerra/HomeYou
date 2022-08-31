@@ -1,14 +1,15 @@
 .design-section {
     height: 718px;
     display: flex;
-    // gap: 106px;
+    gap: 106px;
     align-items: center;
     justify-content: space-between;
 
 
     .left-area {
-        width: 537px;
-        height: 507px;
+        max-width: 537px;
+        width: 100%;
+        // height: 507px;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
@@ -26,8 +27,8 @@
 
         .card {
             background-color: $black;
-            width: 585px;
-            height: 182px;
+            max-width: 585px;
+            // height: 182px;
             padding: 20px 30px 30px 30px;
 
             h2 {
@@ -43,7 +44,7 @@
                 font-size: 16px;
                 line-height: 160%;
                 color: $white;
-                width: 521px;
+                max-width: 521px;
             }
 
         }
@@ -53,6 +54,41 @@
             font-size: 18px;
             line-height: 22px;
             text-decoration: underline;
+            align-self: flex-start;
+            padding: 8px 12px;
+        }
+    }
+
+    @include responsive(1120px) {
+        justify-content: center;
+        height: 292px;
+
+        .left-area {
+            display: none;
+        }
+    }
+
+    @include responsive(600px) {
+
+
+        .rigth-area {
+            .card {
+                h2 {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 140%;
+                }
+            }
+
+            a {
+                text-align: center;
+                font-size: 14px;
+                line-height: 17px;
+            }
         }
     }
 }

@@ -17,6 +17,14 @@ header {
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 22px;
+                    padding: 10px 12px;
+                    transition: all .4s;
+
+                    &:hover {
+                        color: #996f4c;
+                        transform: scale(1.1);
+                        transform: translateY(-3px);
+                    }
                 }
             }
         }
@@ -24,6 +32,53 @@ header {
         .links-icones {
             display: flex;
             gap: 32px;
+
+            img {
+                padding: 10px 12px;
+                cursor: pointer;
+                transition: all .4s;
+
+                &:hover {
+                    color: #996f4c;
+                    transform: scale(1.1);
+                    transform: translateY(-3px);
+                }
+            }
+        }
+
+        .menu-mobile {
+            display: none;
+        }
+    }
+
+    @include responsive(860px) {
+        height: 72px;
+
+        .logo {
+            img {
+                width: 121px;
+            }
+        }
+
+        .menu {
+            gap: 50px;
+
+            .links {
+                display: none;
+            }
+
+            .menu-mobile {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    @include responsive(480px) {
+        .menu {
+            .links-icones {
+                display: none;
+            }
         }
     }
 }

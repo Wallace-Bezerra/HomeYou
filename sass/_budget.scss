@@ -30,4 +30,25 @@
             cursor: pointer;
         }
     }
+
+    @include responsive(600px) {
+        padding-block: 40px;
+
+        .budget-content {
+            h1 {
+                font-size: 24px;
+                line-height: 29px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 140%;
+            }
+
+            button {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
 }
