@@ -33,6 +33,9 @@ header {
   align-items: center;
   height: 100px;
 }
+header .logo {
+  cursor: pointer;
+}
 header .menu {
   display: flex;
 }
@@ -69,8 +72,28 @@ header .menu .links-icones img:hover {
 }
 header .menu .menu-mobile {
   display: none;
+  cursor: pointer;
+  padding: 9px 10px;
+  position: relative;
 }
-@media (max-width: 860px) {
+header .menu .links-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  position: absolute;
+  top: 56px;
+  right: 25px;
+  padding: 16px 20px;
+  background-color: #e1e1e1;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+header .menu .links-mobile.active {
+  opacity: 1;
+  pointer-events: all;
+}
+@media (max-width: 920px) {
   header {
     height: 72px;
   }

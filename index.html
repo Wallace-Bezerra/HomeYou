@@ -15,14 +15,14 @@
 
 <body>
     <header class="container">
-        <div class="logo">
+        <a href="#" class="logo">
             <img src="./img/logo.svg" alt="logo HomeYou">
-        </div>
+        </a>
         <nav class="menu">
             <ul class="links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
 
             <ul class="links-icones">
@@ -39,10 +39,15 @@
             <div class="menu-mobile">
                 <img src="./img/menu-hamburguer.svg" alt="">
             </div>
+            <ul class="links-mobile">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="home-section bg">
+    <section class="home-section bg" id="home">
         <div class="home-section container">
             <div class="home-main ">
                 <h1>Ajudar você a encontrar o melhor conforto, <br>é nossa prioridade.</h1>
@@ -78,7 +83,7 @@
         </div>
     </section>
 
-    <section class="gallery-section bg">
+    <section class="gallery-section bg" id="gallery">
         <div class="gallery-section container">
             <div class="gallery-description">
                 <h1>Galeria</h1>
@@ -101,7 +106,7 @@
         </div>
     </section>
 
-    <section class="budget-section container">
+    <section class="budget-section container" id="contact">
         <div class="budget-content">
             <h1>Orçamento</h1>
             <p>Interessado em entrar em contato com um de nossos profissionais?</p>

@@ -4,6 +4,10 @@ header {
     align-items: center;
     height: 100px;
 
+    .logo {
+        cursor: pointer;
+    }
+
     .menu {
         display: flex;
 
@@ -48,10 +52,34 @@ header {
 
         .menu-mobile {
             display: none;
+            cursor: pointer;
+            padding: 9px 10px;
+            position: relative;
+        }
+
+        .links-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            position: absolute;
+            top: 56px;
+            right: 25px;
+            padding: 16px 20px;
+            background-color: #e1e1e1;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+
+            }
         }
     }
 
-    @include responsive(860px) {
+
+    @include responsive(920px) {
         height: 72px;
 
         .logo {
