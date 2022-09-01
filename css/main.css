@@ -79,19 +79,35 @@ header .menu .menu-mobile {
 header .menu .links-mobile {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 17px;
   position: absolute;
-  top: 56px;
+  top: 62px;
   right: 25px;
-  padding: 16px 20px;
-  background-color: #e1e1e1;
+  padding: 32px 22px;
+  background-color: #272727;
+  transform: translateY(-20px);
+  transition: all cubic-bezier(0.08, 0.8, 0.8, 0.68);
   opacity: 0;
   pointer-events: none;
   transition: all 0.5s;
 }
+header .menu .links-mobile a {
+  color: #fff;
+}
+header .menu .links-mobile::after {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  top: -4px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: #272727;
+}
 header .menu .links-mobile.active {
   opacity: 1;
   pointer-events: all;
+  transform: translateY(0px);
 }
 @media (max-width: 920px) {
   header {

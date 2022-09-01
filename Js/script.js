@@ -1,5 +1,8 @@
 const menuLinks = document.querySelectorAll('.menu .links a');
 const menuLinksMobile = document.querySelectorAll('.menu .links-mobile a');
+
+const menuMobile = document.querySelector('.menu-mobile');
+const linksMobile = document.querySelector('.links-mobile');
 let menuMain = menuLinks;
 
 verificaMedia();
@@ -13,6 +16,7 @@ function verificaMedia() {
     }
     else {
         menuMain = menuLinks;
+        linksMobile.classList.remove("active");
     }
     menuMain.forEach((item) => {
         item.addEventListener('click', (event) => {
@@ -25,12 +29,16 @@ function verificaMedia() {
             })
         })
     });
+
 }
 
+function menuRezise() {
+
+}
 
 //menu mobile
-const menuMobile = document.querySelector('.menu-mobile');
-const linksMobile = document.querySelector('.links-mobile');
+
+
 menuMobile.addEventListener('click', () => {
     linksMobile.classList.toggle("active");
     const links = Array.from(linksMobile.children);

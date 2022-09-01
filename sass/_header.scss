@@ -60,12 +60,31 @@ header {
         .links-mobile {
             display: flex;
             flex-direction: column;
-            gap: 13px;
+            gap: 17px;
             position: absolute;
-            top: 56px;
+            top: 62px;
             right: 25px;
-            padding: 16px 20px;
-            background-color: #e1e1e1;
+            padding: 32px 22px;
+            background-color: $black;
+            transform: translateY(-20px);
+            transition: all cubic-bezier(.08, .8, .8, .68);
+
+            a {
+                color: $white;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                transform: rotate(45deg);
+                top: -4px;
+                right: 20px;
+                width: 10px;
+                height: 10px;
+                background-color: $black;
+
+            }
+
             opacity: 0;
             pointer-events: none;
             transition: all .5s;
@@ -73,6 +92,7 @@ header {
             &.active {
                 opacity: 1;
                 pointer-events: all;
+                transform: translateY(0px);
 
             }
         }
