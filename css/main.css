@@ -58,17 +58,25 @@ header .menu .links li a:hover {
 }
 header .menu .links-icones {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
-header .menu .links-icones img {
-  padding: 10px 12px;
+header .menu .links-icones li {
+  padding: 8px 10px;
   cursor: pointer;
-  transition: all 0.4s;
 }
-header .menu .links-icones img:hover {
-  color: #996f4c;
+header .menu .links-icones li:hover svg {
   transform: scale(1.1);
   transform: translateY(-3px);
+}
+header .menu .links-icones li:hover svg path {
+  stroke: #5a5959;
+}
+header .menu .links-icones li svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
 }
 header .menu .menu-mobile {
   display: none;
@@ -77,13 +85,10 @@ header .menu .menu-mobile {
   position: relative;
 }
 header .menu .links-mobile {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
   position: absolute;
   top: 62px;
   right: 25px;
-  padding: 32px 22px;
+  padding: 20px 16px;
   background-color: #272727;
   transform: translateY(-20px);
   transition: all cubic-bezier(0.08, 0.8, 0.8, 0.68);
@@ -91,8 +96,29 @@ header .menu .links-mobile {
   pointer-events: none;
   transition: all 0.5s;
 }
-header .menu .links-mobile a {
+header .menu .links-mobile .links-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-left: 8px;
+}
+header .menu .links-mobile.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+  display: flex;
+  gap: 17px;
+  flex-direction: column-reverse;
+}
+header .menu .links-mobile.active a {
   color: #fff;
+}
+header .menu .links-mobile.active .links-icones {
+  flex-direction: row;
+  gap: 8px;
+}
+header .menu .links-mobile.active .links-icones li svg path {
+  stroke: #fff;
 }
 header .menu .links-mobile::after {
   content: "";
@@ -103,11 +129,6 @@ header .menu .links-mobile::after {
   width: 10px;
   height: 10px;
   background-color: #272727;
-}
-header .menu .links-mobile.active {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0px);
 }
 @media (max-width: 920px) {
   header {
@@ -125,11 +146,6 @@ header .menu .links-mobile.active {
   header .menu .menu-mobile {
     display: flex;
     align-items: center;
-  }
-}
-@media (max-width: 480px) {
-  header .menu .links-icones {
-    display: none;
   }
 }
 

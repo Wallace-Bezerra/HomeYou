@@ -30,14 +30,21 @@ function verificaMedia() {
         })
     });
 
-}
+    const linkIcones = document.querySelector(".links-icones");
+    if (window.matchMedia('(max-width:480px)').matches) {
 
-function menuRezise() {
-
+        console.log("meidia")
+        linksMobile.appendChild(linkIcones);
+        
+    }
+    else {
+        const menu = document.querySelector('.menu');
+        menu.insertBefore(linkIcones, menuMobile);
+        console.log('teste1');
+    }
 }
 
 //menu mobile
-
 
 menuMobile.addEventListener('click', () => {
     linksMobile.classList.toggle("active");
@@ -47,8 +54,6 @@ menuMobile.addEventListener('click', () => {
             linksMobile.classList.remove("active");
         })
     })
-
-
 })
 
 

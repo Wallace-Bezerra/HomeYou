@@ -35,17 +35,27 @@ header {
 
         .links-icones {
             display: flex;
+            align-items: center;
             gap: 32px;
 
-            img {
-                padding: 10px 12px;
+            li {
+                padding: 8px 10px;
                 cursor: pointer;
-                transition: all .4s;
 
-                &:hover {
-                    color: #996f4c;
+                &:hover svg {
                     transform: scale(1.1);
                     transform: translateY(-3px);
+
+                    path {
+                        stroke: #5a5959;
+                    }
+                }
+
+                svg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all .4s;
                 }
             }
         }
@@ -58,19 +68,48 @@ header {
         }
 
         .links-mobile {
-            display: flex;
-            flex-direction: column;
-            gap: 17px;
             position: absolute;
             top: 62px;
             right: 25px;
-            padding: 32px 22px;
+            padding: 20px 16px;
             background-color: $black;
             transform: translateY(-20px);
             transition: all cubic-bezier(.08, .8, .8, .68);
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
 
-            a {
-                color: $white;
+            .links-ul {
+                display: flex;
+                flex-direction: column;
+                gap: 17px;
+                padding-left: 8px;
+            }
+
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0px);
+                display: flex;
+                gap: 17px;
+                flex-direction: column-reverse;
+
+                a {
+                    color: $white;
+                }
+
+                .links-icones {
+                    flex-direction: row;
+                    gap: 8px;
+
+                    li {
+                        svg {
+                            path {
+                                stroke: $white;
+                            }
+                        }
+                    }
+                }
             }
 
             &::after {
@@ -82,18 +121,6 @@ header {
                 width: 10px;
                 height: 10px;
                 background-color: $black;
-
-            }
-
-            opacity: 0;
-            pointer-events: none;
-            transition: all .5s;
-
-            &.active {
-                opacity: 1;
-                pointer-events: all;
-                transform: translateY(0px);
-
             }
         }
     }
@@ -118,14 +145,6 @@ header {
             .menu-mobile {
                 display: flex;
                 align-items: center;
-            }
-        }
-    }
-
-    @include responsive(480px) {
-        .menu {
-            .links-icones {
-                display: none;
             }
         }
     }
