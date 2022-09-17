@@ -110,13 +110,13 @@ const swiper = new Swiper(".gallery-swiper", {
 //animation
 
 const animateJS = document.querySelectorAll(".animate-js");
-
+animate();
 window.addEventListener("scroll", animate);
 
 function animate() {
     animateJS.forEach((item) => {
 
-        if ((item.getBoundingClientRect().top) < window.innerHeight / 1.5) {
+        if ((item.getBoundingClientRect().top) < window.innerHeight * 0.6) {
             item.classList.add("animation");
         }
     })
