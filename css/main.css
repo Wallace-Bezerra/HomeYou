@@ -30,7 +30,7 @@ img {
 .modal-contact {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s ease;
+  z-index: 99;
 }
 .modal-contact.active {
   opacity: 1;
@@ -209,7 +209,7 @@ img {
   }
 }
 
-@media (max-height: 780px) {
+@media (max-height: 780px) and (orientation: landscape) {
   .modal-contact .overlay .card-modal {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -381,7 +381,11 @@ header .menu .links-mobile::after {
   background-color: #272727;
   border: none;
   padding: 12px 32px;
+  transition: background-color 0.4s;
   cursor: pointer;
+}
+.home-section.bg .home-section .home-main .home-links button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .home-section.bg .home-section .home-main .home-links a {
   font-weight: 500;
@@ -389,6 +393,10 @@ header .menu .links-mobile::after {
   line-height: 22px;
   text-decoration: underline;
   padding: 10px 12px;
+  transition: color 0.3s;
+}
+.home-section.bg .home-section .home-main .home-links a:hover {
+  color: #7a572d;
 }
 @media (max-width: 1120px) {
   .home-section.bg .home-section {
@@ -405,6 +413,9 @@ header .menu .links-mobile::after {
   }
 }
 @media (max-width: 600px) {
+  .home-section.bg .home-section {
+    padding-bottom: 20px;
+  }
   .home-section.bg .home-section .home-main h1 {
     font-size: 24px;
     line-height: 29px;
@@ -414,15 +425,14 @@ header .menu .links-mobile::after {
     font-size: 14px;
     line-height: 140%;
   }
-  .home-section.bg .home-section .home-main .home-links button {
-    padding: 8px 20px;
-    font-size: 12px;
-    line-height: 15px;
-    width: auto;
+  .home-section.bg .home-section .home-main .home-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
   }
-  .home-section.bg .home-section .home-main .home-links a {
-    font-size: 12px;
-    line-height: 15px;
+  .home-section.bg .home-section .home-main .home-links button {
+    padding: 10px 18px;
+    font-size: 16px;
   }
 }
 
@@ -551,17 +561,21 @@ header .menu .links-mobile::after {
 .gallery-section .swiper.gallery-swiper .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #272727;
 }
-
 @media (max-width: 600px) {
-  .gallery-description h1 {
+  .gallery-section .gallery-description h1 {
     font-size: 24px;
     line-height: 29px;
   }
-  .gallery-description p {
+  .gallery-section .gallery-description p {
     font-size: 14px;
     line-height: 140%;
   }
+  .gallery-section .swiper.gallery-swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
 }
+
 .budget-section {
   display: flex;
   justify-content: center;
@@ -590,6 +604,12 @@ header .menu .links-mobile::after {
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
+  transition: all 0.4s;
+}
+.budget-section .budget-content button:hover {
+  background-color: #272727;
+  color: #fff;
+  border-color: #272727;
 }
 @media (max-width: 600px) {
   .budget-section {
@@ -641,6 +661,10 @@ footer.bg {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  transition: color 0.2s;
+}
+.footer-section .links li a:hover {
+  color: #d17505;
 }
 @media (max-width: 840px) {
   .footer-section .logo {
@@ -652,16 +676,16 @@ footer.bg {
     padding-block: 40px;
   }
   .footer-section .links {
-    gap: 78px;
+    gap: 67px;
   }
   .footer-section .links li strong {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   .footer-section .links li a {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
-    margin-bottom: 3px;
+    margin-bottom: 8px;
   }
 }/*# sourceMappingURL=main.css.map */

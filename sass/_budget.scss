@@ -28,6 +28,12 @@
             font-size: 18px;
             line-height: 22px;
             cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+                background-color: $black;
+                color: $white;
+                border-color: $black;
+            }
         }
     }
 

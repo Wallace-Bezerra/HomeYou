@@ -31,6 +31,10 @@ footer.bg {
                 line-height: 22px;
                 margin-bottom: 16px;
                 width: max-content;
+                transition: color 0.2s;
+                &:hover {
+                    color: #d17505;
+                }
             }
         }
     }
@@ -45,19 +49,19 @@ footer.bg {
         padding-block: 40px;
 
         .links {
-            gap: 78px;
+            gap: 67px;
 
             li {
                 strong {
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 17px;
-                    margin-bottom: 6px;
+                    margin-bottom: 10px;
                 }
 
                 a {
-                    font-size: 12px;
+                    font-size: 14px;
                     line-height: 15px;
-                    margin-bottom: 3px;
+                    margin-bottom: 8px;
                 }
             }
         }
