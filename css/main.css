@@ -27,6 +27,35 @@ img {
   padding-inline: 24px;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animate-js {
+  opacity: 0;
+}
+.animate-js.animation {
+  -webkit-animation: fadeIn 0.8s ease forwards;
+          animation: fadeIn 0.8s ease forwards;
+}
+
 .modal-contact {
   opacity: 0;
   pointer-events: none;
@@ -343,6 +372,8 @@ header .menu .links-mobile::after {
   background-color: #F9F9F9;
 }
 .home-section.bg .home-section {
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
   display: flex;
   gap: 68px;
 }

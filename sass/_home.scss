@@ -2,6 +2,7 @@
     background-color: $background;
 
     .home-section {
+        animation: fadeIn 0.8s forwards;
         display: flex;
         gap: 68px;
 

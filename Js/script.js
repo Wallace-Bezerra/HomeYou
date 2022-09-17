@@ -11,7 +11,6 @@ window.addEventListener('resize', verificaMedia);
 
 function verificaMedia() {
     if (window.matchMedia('(max-width:920px)').matches) {
-        console.log('tela 920px')
         menuMain = menuLinksMobile;
     }
     else {
@@ -32,15 +31,11 @@ function verificaMedia() {
 
     const linkIcones = document.querySelector(".links-icones");
     if (window.matchMedia('(max-width:480px)').matches) {
-
-        console.log("meidia")
         linksMobile.appendChild(linkIcones);
-
     }
     else {
         const menu = document.querySelector('.menu');
         menu.insertBefore(linkIcones, menuMobile);
-        console.log('teste1');
     }
 }
 
@@ -61,7 +56,6 @@ menuMobile.addEventListener('click', () => {
 const btnContato = document.querySelectorAll(".js-modal");
 const modal = document.querySelector(".modal-contact")
 const btnClose = document.querySelector(".btn-close");
-console.log(modal);
 btnContato.forEach((item) => {
     item.addEventListener("click", (event) => {
         modal.classList.add("active");
@@ -82,7 +76,6 @@ modal.children[0].addEventListener("click", (event) => {
 
 // footer logo 
 const footerLogo = document.querySelector(".footer-section .logo img")
-console.log(footerLogo);
 footerLogo.addEventListener("click", () => {
     window.scrollTo({
         behavior: "smooth",
@@ -113,3 +106,19 @@ const swiper = new Swiper(".gallery-swiper", {
     }
 
 });
+
+//animation
+
+const animateJS = document.querySelectorAll(".animate-js");
+
+window.addEventListener("scroll", animate);
+
+function animate() {
+    animateJS.forEach((item) => {
+
+        if ((item.getBoundingClientRect().top) < window.innerHeight / 1.5) {
+            item.classList.add("animation");
+        }
+    })
+
+}

@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.animate-js {
+  opacity: 0;
+  &.animation {
+    animation: fadeIn 0.8s ease forwards;
+  }
+}
