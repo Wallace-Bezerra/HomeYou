@@ -35,7 +35,7 @@ function verificaMedia() {
 
         console.log("meidia")
         linksMobile.appendChild(linkIcones);
-        
+
     }
     else {
         const menu = document.querySelector('.menu');
@@ -56,4 +56,36 @@ menuMobile.addEventListener('click', () => {
     })
 })
 
+// modal
 
+const btnContato = document.querySelectorAll(".js-modal");
+const modal = document.querySelector(".modal-contact")
+const btnClose = document.querySelector(".btn-close");
+console.log(modal);
+btnContato.forEach((item) => {
+    item.addEventListener("click", (event) => {
+        modal.classList.add("active");
+    })
+})
+btnClose.addEventListener("click", (event) => {
+    modal.classList.remove("active");
+})
+
+// modal.children[0].children[0].addEventListener("click", (event) => {
+//     event.stopPropagation();
+// })
+modal.children[0].addEventListener("click", (event) => {
+    if (event.currentTarget === event.target) {
+        modal.classList.remove("active");
+    }
+})
+
+// footer logo 
+const footerLogo = document.querySelector(".footer-section .logo img")
+console.log(footerLogo);
+footerLogo.addEventListener("click", () => {
+    window.scrollTo({
+        behavior: "smooth",
+        top: 0
+    })
+})

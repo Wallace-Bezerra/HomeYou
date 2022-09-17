@@ -27,6 +27,187 @@ img {
   padding-inline: 24px;
 }
 
+.modal-contact {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.modal-contact.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-contact.active .overlay .card-modal {
+  transform: translateY(0px);
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-contact .overlay {
+  background-color: rgba(156, 156, 156, 0.403);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30px;
+}
+.modal-contact .overlay .card-modal {
+  position: relative;
+  padding: 70px 80px;
+  max-width: 1050px;
+  width: 100%;
+  height: 600px;
+  background-color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(30px);
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-contact .overlay .card-modal .btn-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.modal-contact .overlay .card-modal .btn-close:hover {
+  transform: scale(1.1);
+}
+.modal-contact .overlay .card-modal .left-area {
+  max-width: 433px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-contact .overlay .card-modal .left-area .logo {
+  margin-bottom: 62px;
+}
+.modal-contact .overlay .card-modal .left-area h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 49px;
+  margin-bottom: 46px;
+}
+.modal-contact .overlay .card-modal .right-area form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-contact .overlay .card-modal .right-area .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.modal-contact .overlay .card-modal .right-area .inputs label {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.modal-contact .overlay .card-modal .right-area .inputs input {
+  height: 45px;
+  margin-bottom: 25px;
+}
+.modal-contact .overlay .card-modal .right-area .inputs input,
+.modal-contact .overlay .card-modal .right-area .inputs textarea {
+  padding-left: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  outline-offset: 1px;
+  outline-color: #797979;
+}
+.modal-contact .overlay .card-modal .right-area .inputs textarea {
+  height: 100px;
+  padding-block: 10px;
+  resize: none;
+  margin-bottom: 40px;
+}
+.modal-contact .overlay .card-modal .right-area button {
+  max-width: 177.04px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  background: #797979;
+  color: #ffffff;
+  border: none;
+  outline-offset: 1px;
+  outline-color: #797979;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.modal-contact .overlay .card-modal .right-area button:hover {
+  background-color: #635f5f;
+  transform: scale(1.01);
+}
+@media (max-width: 1060px) {
+  .modal-contact .overlay .card-modal {
+    flex-direction: column;
+    max-width: 530px;
+    height: 730px;
+    padding-block: 44px;
+    align-items: stretch;
+  }
+  .modal-contact .overlay .card-modal .left-area .logo {
+    margin-bottom: 40px;
+  }
+  .modal-contact .overlay .card-modal .left-area h1 {
+    font-size: 36px;
+    line-height: 41px;
+  }
+  .modal-contact .overlay .card-modal .left-area .contato-img {
+    display: none;
+  }
+  .modal-contact .overlay .card-modal .right-area form {
+    max-width: 100%;
+  }
+  .modal-contact .overlay .card-modal .right-area form .inputs label {
+    font-size: 18px;
+  }
+  .modal-contact .overlay .card-modal .right-area form .inputs input {
+    margin-bottom: 20px;
+  }
+  .modal-contact .overlay .card-modal .right-area form .inputs textarea {
+    margin-bottom: 35px;
+  }
+  .modal-contact .overlay .card-modal .right-area button {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .modal-contact .overlay .card-modal {
+    justify-content: initial;
+    max-width: 318px;
+    height: 670px;
+    padding-inline: 40px;
+  }
+  .modal-contact .overlay .card-modal .logo {
+    width: 160px;
+  }
+  .modal-contact .overlay .card-modal .btn-close {
+    top: 18px;
+    right: 18px;
+  }
+  .modal-contact .overlay .card-modal .btn-close img {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-contact .overlay .card-modal .left-area .logo {
+    margin-bottom: 32px;
+  }
+  .modal-contact .overlay .card-modal .left-area h1 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -417,6 +598,9 @@ footer.bg {
   padding-block: 90px;
   flex-wrap: wrap;
 }
+.footer-section .logo img {
+  cursor: pointer;
+}
 .footer-section .links {
   display: flex;
   flex-wrap: wrap;
@@ -433,6 +617,8 @@ footer.bg {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 16px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 @media (max-width: 840px) {
