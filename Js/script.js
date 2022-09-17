@@ -89,3 +89,27 @@ footerLogo.addEventListener("click", () => {
         top: 0
     })
 })
+
+// swiper
+
+const swiper = new Swiper(".gallery-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        200: {
+            slidesPerView: 1,
+        },
+        420: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        700: {
+            slidesPerView: 3,
+        }
+    }
+
+});

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
     <title>HomeYou</title>
 </head>
@@ -141,19 +142,32 @@
                     trabalhamos com designs diferentes e inovadores.
                 </p>
             </div>
-            <ul class="gallery-wrapper">
-                <li>
-                    <img src="./img/img1.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./img/img2.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./img/img3.jpg" alt="">
-                </li>
+            <div class="swiper gallery-swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="./img/img1.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/img2.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/img3.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/img4.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/img5.jpg" alt="">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./img/img6.jpg" alt="">
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
 
-            </ul>
         </div>
+
     </section>
 
     <section class="budget-section container" id="contact">
@@ -191,6 +205,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./Js/script.js"></script>
 </body>
 

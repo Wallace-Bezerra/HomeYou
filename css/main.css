@@ -51,6 +51,7 @@ img {
   justify-content: center;
   align-items: center;
   padding-inline: 30px;
+  z-index: 2;
 }
 .modal-contact .overlay .card-modal {
   position: relative;
@@ -208,9 +209,10 @@ img {
   }
 }
 
-@media (orientation: landscape) {
+@media (max-height: 780px) {
   .modal-contact .overlay .card-modal {
     margin-top: 40px;
+    margin-bottom: 40px;
     height: 100vh;
     overflow: scroll;
   }
@@ -525,29 +527,41 @@ header .menu .links-mobile::after {
   line-height: 160%;
   color: #797979;
 }
-.gallery-section .gallery-wrapper {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 47px;
+.gallery-section .swiper.gallery-swiper {
+  overflow-x: hidden;
 }
+.gallery-section .swiper.gallery-swiper .swiper-wrapper {
+  max-height: 610px;
+  height: 100%;
+}
+.gallery-section .swiper.gallery-swiper .swiper-pagination {
+  bottom: 1px;
+  left: -6px;
+  width: auto;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+.gallery-section .swiper.gallery-swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+}
+.gallery-section .swiper.gallery-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #272727;
+}
+
 @media (max-width: 600px) {
-  .gallery-section .gallery-description h1 {
+  .gallery-description h1 {
     font-size: 24px;
     line-height: 29px;
   }
-  .gallery-section .gallery-description p {
+  .gallery-description p {
     font-size: 14px;
     line-height: 140%;
   }
-  .gallery-section .gallery-wrapper {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .gallery-section .gallery-wrapper li {
-    text-align: center;
-  }
 }
-
 .budget-section {
   display: flex;
   justify-content: center;
