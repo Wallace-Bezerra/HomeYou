@@ -328,6 +328,7 @@ header .menu .links-mobile.active {
   display: flex;
   gap: 17px;
   flex-direction: column-reverse;
+  z-index: 2;
 }
 header .menu .links-mobile.active a {
   color: #fff;

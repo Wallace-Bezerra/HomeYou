@@ -22,7 +22,7 @@ header {
                     font-size: 18px;
                     line-height: 22px;
                     padding: 10px 12px;
-                    transition: all .4s;
+                    transition: all 0.4s;
 
                     &:hover {
                         color: #996f4c;
@@ -55,7 +55,7 @@ header {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    transition: all .4s;
+                    transition: all 0.4s;
                 }
             }
         }
@@ -74,10 +74,10 @@ header {
             padding: 20px 16px;
             background-color: $black;
             transform: translateY(-20px);
-            transition: all cubic-bezier(.08, .8, .8, .68);
+            transition: all cubic-bezier(0.08, 0.8, 0.8, 0.68);
             opacity: 0;
             pointer-events: none;
-            transition: all .5s;
+            transition: all 0.5s;
 
             .links-ul {
                 display: flex;
@@ -93,6 +93,7 @@ header {
                 display: flex;
                 gap: 17px;
                 flex-direction: column-reverse;
+                z-index: 2;
 
                 a {
                     color: $white;
@@ -124,7 +125,6 @@ header {
             }
         }
     }
-
 
     @include responsive(920px) {
         height: 72px;
