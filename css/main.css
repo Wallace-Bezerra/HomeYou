@@ -27,17 +27,6 @@ img {
   padding-inline: 24px;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -52,8 +41,7 @@ img {
   opacity: 0;
 }
 .animate-js.animation {
-  -webkit-animation: fadeIn 0.8s ease forwards;
-          animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .modal-contact {
@@ -238,7 +226,7 @@ img {
   }
 }
 
-@media (max-height: 780px) and (orientation: landscape) {
+@media (max-height: 600px) {
   .modal-contact .overlay .card-modal {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -373,8 +361,7 @@ header .menu .links-mobile::after {
   background-color: #F9F9F9;
 }
 .home-section.bg .home-section {
-  -webkit-animation: fadeIn 0.8s forwards;
-          animation: fadeIn 0.8s forwards;
+  animation: fadeIn 0.8s forwards;
   display: flex;
   gap: 68px;
 }
@@ -690,8 +677,6 @@ footer.bg {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 16px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   transition: color 0.2s;
 }
